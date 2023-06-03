@@ -1,0 +1,12 @@
+* Medusa policy mining hub
+Welcome to the hub of the Medusa policy mining project. It also serves as a
+result page for the dissertation thesis "Operating Systems Security". This is
+the contents of the repository:
+
+- =medusa-policy-mining= :: The main policy mining application.
+- =medusa-policy-mining-helpers= :: Helper scripts to configure Constable and
+  get audit logs. Offers complete automation. Should be used on a Medusa kernel.
+- =logs= :: These are the logs used for the evaluation in the dissertation
+  thesis.
+- =results= :: These are the raw results from the evaluation in the dissertation
+  thesis.

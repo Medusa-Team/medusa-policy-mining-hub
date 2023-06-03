@@ -1,0 +1,6 @@
+[submodule "medusa-policy-mining"]
+	path = medusa-policy-mining
+	url = https://github.com/Programator2/medusa-policy-mining.git
+[submodule "medusa-policy-mining-helpers"]
+	path = medusa-policy-mining-helpers
+	url = https://github.com/Programator2/medusa-policy-mining-helpers.git

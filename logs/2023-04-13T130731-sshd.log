@@ -1,0 +1,306 @@
+type=USER_ACCT msg=audit(1681384051.569:439): pid=10875 uid=0 auid=0 ses=3 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_CMD msg=audit(1681384051.569:440): pid=10875 uid=0 auid=0 ses=3 msg='cwd="/root/Constable/constable" cmd=73797374656D63746C2073746172742073736864 exe="/usr/bin/sudo" terminal=pts/0 res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1681384051.569:441): pid=10875 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_START msg=audit(1681384051.577:442): pid=10875 uid=0 auid=0 ses=3 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=AVC msg=audit(1681384051.621:443): Medusa: op=exec ans=ALLOW as_request=1 pid=10878 comm="(sshd)" path="/usr/sbin/sshd" filename="/usr/sbin/sshd"
+type=AVC msg=audit(1681384051.621:443): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="(sshd)" dir="/usr/lib64/ld-linux-x86-64.so.2" mode=4
+type=SYSCALL msg=audit(1681384051.621:443): arch=c000003e syscall=59 success=yes exit=0 a0=556b25ca5f10 a1=556b25c9e710 a2=556b25b338a0 a3=7fbf86cdeb5b items=2 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1681384051.621:443): argc=2 a0="/usr/sbin/sshd" a1="-D"
+type=CWD msg=audit(1681384051.621:443): cwd="/"
+type=PATH msg=audit(1681384051.621:443): item=0 name="/usr/sbin/sshd" inode=17482344 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1681384051.621:443): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=8391236 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:443): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:444): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ld.so.cache" mode=4
+type=SYSCALL msg=audit(1681384051.621:444): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85dbfe9 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:444): cwd="/"
+type=PATH msg=audit(1681384051.621:444): item=0 name="/etc/ld.so.cache" inode=17895517 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:444): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:445): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libaudit.so.1.0.0" mode=4
+type=SYSCALL msg=audit(1681384051.621:445): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b00a0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:445): cwd="/"
+type=PATH msg=audit(1681384051.621:445): item=0 name="/lib64/libaudit.so.1" inode=8391462 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:445): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:446): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libpam.so.0.85.1" mode=4
+type=SYSCALL msg=audit(1681384051.621:446): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b05b0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:446): cwd="/"
+type=PATH msg=audit(1681384051.621:446): item=0 name="/lib64/libpam.so.0" inode=8391826 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:446): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:447): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libsystemd.so.0.34.0" mode=4
+type=SYSCALL msg=audit(1681384051.621:447): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b0ac0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:447): cwd="/"
+type=PATH msg=audit(1681384051.621:447): item=0 name="/lib64/libsystemd.so.0" inode=8391544 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:447): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:448): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libcrypto.so.3.0.8" mode=4
+type=SYSCALL msg=audit(1681384051.621:448): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b0fd0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:448): cwd="/"
+type=PATH msg=audit(1681384051.621:448): item=0 name="/lib64/libcrypto.so.3" inode=9017679 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:448): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:449): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libz.so.1.2.12" mode=4
+type=SYSCALL msg=audit(1681384051.621:449): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b14e0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:449): cwd="/"
+type=PATH msg=audit(1681384051.621:449): item=0 name="/lib64/libz.so.1" inode=8391332 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:449): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:450): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libcrypt.so.2.0.0" mode=4
+type=SYSCALL msg=audit(1681384051.621:450): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b19f0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:450): cwd="/"
+type=PATH msg=audit(1681384051.621:450): item=0 name="/lib64/libcrypt.so.2" inode=8391391 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:450): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.621:451): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libselinux.so.1" mode=4
+type=SYSCALL msg=audit(1681384051.621:451): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c85b1f00 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.621:451): cwd="/"
+type=PATH msg=audit(1681384051.621:451): item=0 name="/lib64/libselinux.so.1" inode=8393017 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.621:451): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:452): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libgssapi_krb5.so.2.2" mode=4
+type=SYSCALL msg=audit(1681384051.625:452): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c80054f0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:452): cwd="/"
+type=PATH msg=audit(1681384051.625:452): item=0 name="/lib64/libgssapi_krb5.so.2" inode=9017694 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:452): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:453): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libkrb5.so.3.3" mode=4
+type=SYSCALL msg=audit(1681384051.625:453): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c8005a10 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:453): cwd="/"
+type=PATH msg=audit(1681384051.625:453): item=0 name="/lib64/libkrb5.so.3" inode=9017704 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:453): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:454): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libcom_err.so.2.1" mode=4
+type=SYSCALL msg=audit(1681384051.625:454): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c8005f20 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:454): cwd="/"
+type=PATH msg=audit(1681384051.625:454): item=0 name="/lib64/libcom_err.so.2" inode=8391375 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:454): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:455): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libc.so.6" mode=4
+type=SYSCALL msg=audit(1681384051.625:455): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c8006430 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:455): cwd="/"
+type=PATH msg=audit(1681384051.625:455): item=0 name="/lib64/libc.so.6" inode=8391239 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:455): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:456): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libcap-ng.so.0.0.0" mode=4
+type=SYSCALL msg=audit(1681384051.625:456): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c8006940 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:456): cwd="/"
+type=PATH msg=audit(1681384051.625:456): item=0 name="/lib64/libcap-ng.so.0" inode=8391456 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:456): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:457): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libeconf.so.0.4.0" mode=4
+type=SYSCALL msg=audit(1681384051.625:457): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c8006e90 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:457): cwd="/"
+type=PATH msg=audit(1681384051.625:457): item=0 name="/lib64/libeconf.so.0" inode=8391823 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:457): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:458): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libm.so.6" mode=4
+type=SYSCALL msg=audit(1681384051.625:458): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cb44f0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:458): cwd="/"
+type=PATH msg=audit(1681384051.625:458): item=0 name="/lib64/libm.so.6" inode=8391242 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:458): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:459): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libcap.so.2.48" mode=4
+type=SYSCALL msg=audit(1681384051.625:459): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cb4a60 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:459): cwd="/"
+type=PATH msg=audit(1681384051.625:459): item=0 name="/lib64/libcap.so.2" inode=8391384 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:459): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:460): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/liblzma.so.5.4.1" mode=4
+type=SYSCALL msg=audit(1681384051.625:460): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cb4f70 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:460): cwd="/"
+type=PATH msg=audit(1681384051.625:460): item=0 name="/lib64/liblzma.so.5" inode=8391360 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:460): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:461): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libzstd.so.1.5.4" mode=4
+type=SYSCALL msg=audit(1681384051.625:461): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cb5480 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:461): cwd="/"
+type=PATH msg=audit(1681384051.625:461): item=0 name="/lib64/libzstd.so.1" inode=8391362 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:461): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:462): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/liblz4.so.1.9.4" mode=4
+type=SYSCALL msg=audit(1681384051.625:462): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cb5990 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:462): cwd="/"
+type=PATH msg=audit(1681384051.625:462): item=0 name="/lib64/liblz4.so.1" inode=8391537 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:462): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:463): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libgcc_s-12-20221121.so.1" mode=4
+type=SYSCALL msg=audit(1681384051.625:463): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cb5ea0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:463): cwd="/"
+type=PATH msg=audit(1681384051.625:463): item=0 name="/lib64/libgcc_s.so.1" inode=8388743 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:463): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:464): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libpcre2-8.so.0.11.0" mode=4
+type=SYSCALL msg=audit(1681384051.625:464): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7ab1620 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:464): cwd="/"
+type=PATH msg=audit(1681384051.625:464): item=0 name="/lib64/libpcre2-8.so.0" inode=8393014 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:464): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:465): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libk5crypto.so.3.1" mode=4
+type=SYSCALL msg=audit(1681384051.625:465): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7ab1b80 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:465): cwd="/"
+type=PATH msg=audit(1681384051.625:465): item=0 name="/lib64/libk5crypto.so.3" inode=9017698 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:465): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:466): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libkrb5support.so.0.1" mode=4
+type=SYSCALL msg=audit(1681384051.625:466): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7ab20a0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:466): cwd="/"
+type=PATH msg=audit(1681384051.625:466): item=0 name="/lib64/libkrb5support.so.0" inode=9017706 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:466): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:467): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libkeyutils.so.1.9" mode=4
+type=SYSCALL msg=audit(1681384051.625:467): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7ab25c0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:467): cwd="/"
+type=PATH msg=audit(1681384051.625:467): item=0 name="/lib64/libkeyutils.so.1" inode=8391428 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:467): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.625:468): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/lib64/libresolv.so.2" mode=4
+type=SYSCALL msg=audit(1681384051.625:468): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7ab2ae0 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.625:468): cwd="/"
+type=PATH msg=audit(1681384051.625:468): item=0 name="/lib64/libresolv.so.2" inode=8391248 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.625:468): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:469): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/proc/filesystems" mode=4
+type=SYSCALL msg=audit(1681384051.629:469): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7ff9295 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:469): cwd="/"
+type=PATH msg=audit(1681384051.629:469): item=0 name="/proc/filesystems" inode=4026532055 dev=00:11 mode=0100444 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:469): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:470): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/proc/sys/kernel/cap_last_cap" mode=4
+type=SYSCALL msg=audit(1681384051.629:470): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7cbc03e a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:470): cwd="/"
+type=PATH msg=audit(1681384051.629:470): item=0 name="/proc/sys/kernel/cap_last_cap" inode=13337 dev=00:11 mode=0100444 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:470): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:471): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/dev/null" mode=6
+type=SYSCALL msg=audit(1681384051.629:471): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b5345568bf a2=2 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:471): cwd="/"
+type=PATH msg=audit(1681384051.629:471): item=0 name="/dev/null" inode=4 dev=00:05 mode=020666 ouid=0 ogid=0 rdev=01:03 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:471): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:472): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/pki/tls/openssl.cnf" mode=4
+type=SYSCALL msg=audit(1681384051.629:472): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53541f840 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:472): cwd="/"
+type=PATH msg=audit(1681384051.629:472): item=0 name="/etc/pki/tls/openssl.cnf" inode=148777 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:472): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:473): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/share/crypto-policies/DEFAULT/opensslcnf.txt" mode=4
+type=SYSCALL msg=audit(1681384051.629:473): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=55b535421640 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:473): cwd="/"
+type=PATH msg=audit(1681384051.629:473): item=0 name="/etc/crypto-policies/back-ends/opensslcnf.config" inode=25378857 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:473): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:474): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/sshd_config" mode=4
+type=SYSCALL msg=audit(1681384051.629:474): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b534556f1d a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:474): cwd="/"
+type=PATH msg=audit(1681384051.629:474): item=0 name="/etc/ssh/sshd_config" inode=9139616 dev=fd:00 mode=0100600 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:474): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:475): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/sshd_config.d" mode=4
+type=SYSCALL msg=audit(1681384051.629:475): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7ffdc8718dc0 a2=90800 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:475): cwd="/"
+type=PATH msg=audit(1681384051.629:475): item=0 name="/etc/ssh/sshd_config.d/" inode=9139617 dev=fd:00 mode=040700 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:475): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:476): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/sshd_config.d/01-permitrootlogin.conf" mode=4
+type=SYSCALL msg=audit(1681384051.629:476): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544dad0 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:476): cwd="/"
+type=PATH msg=audit(1681384051.629:476): item=0 name="/etc/ssh/sshd_config.d/01-permitrootlogin.conf" inode=9286925 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:476): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:477): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/sshd_config.d/50-redhat.conf" mode=4
+type=SYSCALL msg=audit(1681384051.629:477): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544dd10 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:477): cwd="/"
+type=PATH msg=audit(1681384051.629:477): item=0 name="/etc/ssh/sshd_config.d/50-redhat.conf" inode=9139618 dev=fd:00 mode=0100600 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:477): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.629:478): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/share/crypto-policies/DEFAULT/opensshserver.txt" mode=4
+type=SYSCALL msg=audit(1681384051.629:478): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544e5e0 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.629:478): cwd="/"
+type=PATH msg=audit(1681384051.629:478): item=0 name="/etc/crypto-policies/back-ends/opensshserver.config" inode=25378855 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.629:478): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:479): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/authselect/nsswitch.conf" mode=4
+type=SYSCALL msg=audit(1681384051.633:479): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7e5aae3 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:479): cwd="/"
+type=PATH msg=audit(1681384051.633:479): item=0 name="/etc/nsswitch.conf" inode=9536112 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.633:479): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:480): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/passwd" mode=4
+type=SYSCALL msg=audit(1681384051.633:480): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f16c7e5abed a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:480): cwd="/"
+type=PATH msg=audit(1681384051.633:480): item=0 name="/etc/passwd" inode=17656990 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.633:480): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:481): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_rsa_key" mode=4
+type=SYSCALL msg=audit(1681384051.633:481): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544ff70 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:481): cwd="/"
+type=PATH msg=audit(1681384051.633:481): item=0 name="/etc/ssh/ssh_host_rsa_key" inode=9536121 dev=fd:00 mode=0100640 ouid=0 ogid=101 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="ssh_keys"
+type=PROCTITLE msg=audit(1681384051.633:481): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:482): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/group" mode=4
+type=SYSCALL msg=audit(1681384051.633:482): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=7f16c7e5abe2 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:482): cwd="/"
+type=PATH msg=audit(1681384051.633:482): item=0 name="/etc/group" inode=17656988 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.633:482): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:483): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_rsa_key" mode=4
+type=SYSCALL msg=audit(1681384051.633:483): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544ff70 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:483): cwd="/"
+type=PATH msg=audit(1681384051.633:483): item=0 name="/etc/ssh/ssh_host_rsa_key" inode=9536121 dev=fd:00 mode=0100640 ouid=0 ogid=101 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="ssh_keys"
+type=PROCTITLE msg=audit(1681384051.633:483): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:484): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_rsa_key.pub" mode=4
+type=SYSCALL msg=audit(1681384051.633:484): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544d8e0 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:484): cwd="/"
+type=PATH msg=audit(1681384051.633:484): item=0 name="/etc/ssh/ssh_host_rsa_key.pub" inode=9536122 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.633:484): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:485): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_ecdsa_key" mode=4
+type=SYSCALL msg=audit(1681384051.633:485): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b535425230 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:485): cwd="/"
+type=PATH msg=audit(1681384051.633:485): item=0 name="/etc/ssh/ssh_host_ecdsa_key" inode=9536116 dev=fd:00 mode=0100640 ouid=0 ogid=101 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="ssh_keys"
+type=PROCTITLE msg=audit(1681384051.633:485): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:486): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/group" mode=4
+type=SYSCALL msg=audit(1681384051.633:486): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=7f16c7e5abe2 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:486): cwd="/"
+type=PATH msg=audit(1681384051.633:486): item=0 name="/etc/group" inode=17656988 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.633:486): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:487): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_ecdsa_key" mode=4
+type=SYSCALL msg=audit(1681384051.633:487): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b535425230 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:487): cwd="/"
+type=PATH msg=audit(1681384051.633:487): item=0 name="/etc/ssh/ssh_host_ecdsa_key" inode=9536116 dev=fd:00 mode=0100640 ouid=0 ogid=101 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="ssh_keys"
+type=PROCTITLE msg=audit(1681384051.633:487): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.633:488): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_ecdsa_key.pub" mode=4
+type=SYSCALL msg=audit(1681384051.633:488): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b535457a20 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.633:488): cwd="/"
+type=PATH msg=audit(1681384051.633:488): item=0 name="/etc/ssh/ssh_host_ecdsa_key.pub" inode=9536117 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.633:488): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:489): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_ed25519_key" mode=4
+type=SYSCALL msg=audit(1681384051.641:489): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544efc0 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:489): cwd="/"
+type=PATH msg=audit(1681384051.641:489): item=0 name="/etc/ssh/ssh_host_ed25519_key" inode=9536118 dev=fd:00 mode=0100640 ouid=0 ogid=101 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="ssh_keys"
+type=PROCTITLE msg=audit(1681384051.641:489): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:490): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/group" mode=4
+type=SYSCALL msg=audit(1681384051.641:490): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=7f16c7e5abe2 a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:490): cwd="/"
+type=PATH msg=audit(1681384051.641:490): item=0 name="/etc/group" inode=17656988 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.641:490): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:491): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_ed25519_key" mode=4
+type=SYSCALL msg=audit(1681384051.641:491): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b53544efc0 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:491): cwd="/"
+type=PATH msg=audit(1681384051.641:491): item=0 name="/etc/ssh/ssh_host_ed25519_key" inode=9536118 dev=fd:00 mode=0100640 ouid=0 ogid=101 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="ssh_keys"
+type=PROCTITLE msg=audit(1681384051.641:491): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:492): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/etc/ssh/ssh_host_ed25519_key.pub" mode=4
+type=SYSCALL msg=audit(1681384051.641:492): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b535457a20 a2=0 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:492): cwd="/"
+type=PATH msg=audit(1681384051.641:492): item=0 name="/etc/ssh/ssh_host_ed25519_key.pub" inode=9536119 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.641:492): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:493): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/dev/tty" mode=4
+type=SYSCALL msg=audit(1681384051.641:493): arch=c000003e syscall=257 success=no exit=-6 a0=ffffff9c a1=55b534556acf a2=100 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:493): cwd="/"
+type=PATH msg=audit(1681384051.641:493): item=0 name="/dev/tty" inode=11 dev=00:05 mode=020666 ouid=0 ogid=5 rdev=05:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="tty"
+type=PROCTITLE msg=audit(1681384051.641:493): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:494): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/proc/10878/oom_score_adj" mode=6
+type=SYSCALL msg=audit(1681384051.641:494): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55b534584907 a2=2 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:494): cwd="/"
+type=PATH msg=audit(1681384051.641:494): item=0 name="/proc/self/oom_score_adj" inode=140145 dev=00:11 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.641:494): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.641:495): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/usr/share/zoneinfo/Europe/Bratislava" mode=4
+type=SYSCALL msg=audit(1681384051.641:495): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=7f16c7e5846b a2=80000 a3=0 items=1 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.641:495): cwd="/"
+type=PATH msg=audit(1681384051.641:495): item=0 name="/etc/localtime" inode=481 dev=fd:00 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.641:495): proctitle=2F7573722F7362696E2F73736864002D44
+type=AVC msg=audit(1681384051.649:496): Medusa: op=mknod ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/run" name="sshd.pid" mode=33206 dev=00:00
+type=AVC msg=audit(1681384051.649:496): Medusa: op=open ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/run/sshd.pid" mode=2
+type=SYSCALL msg=audit(1681384051.649:496): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=55b53542a410 a2=241 a3=1b6 items=2 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=openat AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384051.649:496): cwd="/"
+type=PATH msg=audit(1681384051.649:496): item=0 name="/var/run/" inode=1 dev=00:15 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1681384051.649:496): item=1 name="/var/run/sshd.pid" inode=1454 dev=00:15 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=CREATE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384051.649:496): proctitle=2F7573722F7362696E2F73736864002D44
+type=SERVICE_START msg=audit(1681384051.689:497): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=sshd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_END msg=audit(1681384051.693:498): pid=10875 uid=0 auid=0 ses=3 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=CRED_DISP msg=audit(1681384051.693:499): pid=10875 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_ACCT msg=audit(1681384056.717:500): pid=10882 uid=0 auid=0 ses=3 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_CMD msg=audit(1681384056.717:501): pid=10882 uid=0 auid=0 ses=3 msg='cwd="/root/Constable/constable" cmd=73797374656D63746C2073746F702073736864 exe="/usr/bin/sudo" terminal=pts/0 res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1681384056.721:502): pid=10882 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_START msg=audit(1681384056.725:503): pid=10882 uid=0 auid=0 ses=3 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=CRYPTO_KEY_USER msg=audit(1681384056.741:504): pid=10878 uid=0 auid=4294967295 ses=4294967295 msg='op=destroy kind=server fp=SHA256:9e:a7:67:10:ac:ae:a5:d5:78:52:16:e3:81:85:1f:a0:43:cc:84:2b:4d:ab:69:af:97:e6:fc:03:59:04:36:d8 direction=? spid=10878 suid=0  exe="/usr/sbin/sshd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset" SUID="root"
+type=AVC msg=audit(1681384056.741:505): Medusa: op=unlink ans=ALLOW as_request=0 pid=10878 comm="sshd" dir="/run" mode=0 name="sshd.pid"
+type=SYSCALL msg=audit(1681384056.741:505): arch=c000003e syscall=87 success=yes exit=0 a0=55b53542a410 a1=55b53540c010 a2=55b06e1640b2 a3=40 items=2 ppid=1 pid=10878 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" key=(null)ARCH=x86_64 SYSCALL=unlink AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=CWD msg=audit(1681384056.741:505): cwd="/"
+type=PATH msg=audit(1681384056.741:505): item=0 name="/var/run/" inode=1 dev=00:15 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1681384056.741:505): item=1 name="/var/run/sshd.pid" inode=1454 dev=00:15 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=DELETE cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1681384056.741:505): proctitle=2F7573722F7362696E2F73736864002D44
+type=SERVICE_STOP msg=audit(1681384056.741:506): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=sshd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_END msg=audit(1681384056.741:507): pid=10882 uid=0 auid=0 ses=3 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=CRED_DISP msg=audit(1681384056.741:508): pid=10882 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_ACCT msg=audit(1681384057.769:509): pid=10887 uid=0 auid=0 ses=3 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_CMD msg=audit(1681384057.769:510): pid=10887 uid=0 auid=0 ses=3 msg='cwd="/root/Constable/constable" cmd=73796E63202F7661722F6C6F672F61756469742F61756469742E6C6F67 exe="/usr/bin/sudo" terminal=pts/0 res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1681384057.773:511): pid=10887 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_START msg=audit(1681384057.777:512): pid=10887 uid=0 auid=0 ses=3 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_END msg=audit(1681384057.781:513): pid=10887 uid=0 auid=0 ses=3 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=CRED_DISP msg=audit(1681384057.781:514): pid=10887 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_ACCT msg=audit(1681384057.797:515): pid=10889 uid=0 auid=0 ses=3 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_CMD msg=audit(1681384057.797:516): pid=10889 uid=0 auid=0 ses=3 msg='cwd="/root/Constable/constable" cmd=62617368202D63202F726F6F742F6D65647573612D706F6C6963792D6D696E696E672D68656C706572732F726561645F66726F6D2E7079202F7661722F6C6F672F61756469742F61756469742E6C6F67202F726F6F742F6D65647573612D706F6C6963792D6D696E696E672D68656C706572732F6C6173745F6C696E655F66726F6D5F61756469742E6C6F67203E202F726F6F742F6D65647573612D706F6C6963792D6D696E696E672D68656C706572732F323032332D30342D3133543133303733312D737368642E6C6F67 exe="/usr/bin/sudo" terminal=pts/0 res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1681384057.801:517): pid=10889 uid=0 auid=0 ses=3 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"
+type=USER_START msg=audit(1681384057.805:518): pid=10889 uid=0 auid=0 ses=3 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'UID="root" AUID="root"

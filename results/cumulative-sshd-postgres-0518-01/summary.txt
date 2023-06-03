@@ -1,0 +1,96 @@
+no generalization
+-----------------
+hits=12764 correct denials=16503 overpermission=247 underpermission=2618
+precision=0.981 sensitivity=0.83
+f1=0.899 f2=0.856 fm=0.902 csi=0.817
+
+T
+-
+hits=13193 correct denials=16278 overpermission=472 underpermission=2189
+precision=0.965 sensitivity=0.858
+f1=0.908 f2=0.877 fm=0.91 csi=0.832
+
+O
+-
+hits=13690 correct denials=16420 overpermission=330 underpermission=1692
+precision=0.976 sensitivity=0.89
+f1=0.931 f2=0.906 fm=0.932 csi=0.871
+
+OD
+--
+hits=12764 correct denials=16503 overpermission=247 underpermission=2618
+precision=0.981 sensitivity=0.83
+f1=0.899 f2=0.856 fm=0.902 csi=0.817
+
+N
+-
+hits=12797 correct denials=16414 overpermission=336 underpermission=2585
+precision=0.974 sensitivity=0.832
+f1=0.898 f2=0.857 fm=0.9 csi=0.814
+
+M
+-
+hits=12767 correct denials=16503 overpermission=247 underpermission=2615
+precision=0.981 sensitivity=0.83
+f1=0.899 f2=0.856 fm=0.902 csi=0.817
+
+M+T
+---
+hits=13196 correct denials=16278 overpermission=472 underpermission=2186
+precision=0.965 sensitivity=0.858
+f1=0.909 f2=0.877 fm=0.91 csi=0.832
+
+N+T
+---
+hits=13227 correct denials=16197 overpermission=553 underpermission=2155
+precision=0.96 sensitivity=0.86
+f1=0.907 f2=0.878 fm=0.909 csi=0.83
+
+O+T
+---
+hits=14106 correct denials=16195 overpermission=555 underpermission=1276
+precision=0.962 sensitivity=0.917
+f1=0.939 f2=0.926 fm=0.939 csi=0.885
+
+OD+T
+----
+hits=13193 correct denials=16278 overpermission=472 underpermission=2189
+precision=0.965 sensitivity=0.858
+f1=0.908 f2=0.877 fm=0.91 csi=0.832
+
+OD+O
+----
+hits=13690 correct denials=16420 overpermission=330 underpermission=1692
+precision=0.976 sensitivity=0.89
+f1=0.931 f2=0.906 fm=0.932 csi=0.871
+
+O+N
+---
+hits=13690 correct denials=16412 overpermission=338 underpermission=1692
+precision=0.976 sensitivity=0.89
+f1=0.931 f2=0.906 fm=0.932 csi=0.871
+
+O+M
+---
+hits=12767 correct denials=16503 overpermission=247 underpermission=2615
+precision=0.981 sensitivity=0.83
+f1=0.899 f2=0.856 fm=0.902 csi=0.817
+
+OD+N
+----
+hits=12797 correct denials=16414 overpermission=336 underpermission=2585
+precision=0.974 sensitivity=0.832
+f1=0.898 f2=0.857 fm=0.9 csi=0.814
+
+OD+M
+----
+hits=12767 correct denials=16503 overpermission=247 underpermission=2615
+precision=0.981 sensitivity=0.83
+f1=0.899 f2=0.856 fm=0.902 csi=0.817
+
+N+M
+---
+hits=12767 correct denials=16503 overpermission=247 underpermission=2615
+precision=0.981 sensitivity=0.83
+f1=0.899 f2=0.856 fm=0.902 csi=0.817
+

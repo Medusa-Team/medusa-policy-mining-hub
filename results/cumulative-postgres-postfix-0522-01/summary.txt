@@ -1,0 +1,30 @@
+T
+-
+hits=26075 correct denials=36465 overpermission=872 underpermission=3394
+precision=0.968 sensitivity=0.885
+f1=0.924 f2=0.9 fm=0.925 csi=0.859
+
+M+T
+---
+hits=26922 correct denials=35693 overpermission=1644 underpermission=2547
+precision=0.942 sensitivity=0.914
+f1=0.928 f2=0.919 fm=0.928 csi=0.865
+
+N+T
+---
+hits=26102 correct denials=36465 overpermission=872 underpermission=3367
+precision=0.968 sensitivity=0.886
+f1=0.925 f2=0.901 fm=0.926 csi=0.86
+
+O+T
+---
+hits=27068 correct denials=36429 overpermission=908 underpermission=2401
+precision=0.968 sensitivity=0.919
+f1=0.942 f2=0.928 fm=0.943 csi=0.891
+
+OD+T
+----
+hits=26075 correct denials=36465 overpermission=872 underpermission=3394
+precision=0.968 sensitivity=0.885
+f1=0.924 f2=0.9 fm=0.925 csi=0.859
+

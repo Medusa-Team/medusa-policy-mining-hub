@@ -1,0 +1,12 @@
+                        subject_context                                                         name operation                   object_context  reference_result  medusa_result
+system_u:system_r:sshd_t:s0-s0:c0.c1023                                                     /dev/shm      read     system_u:object_r:tmpfs_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023                                               /proc/1085/exe      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023                                       /etc/authselect/custom     write       system_u:object_r:etc_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023                                       /etc/ssh/sshd_config.d     write       system_u:object_r:etc_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023               /proc/1085/map_files/55da295a6000-55da295b2000      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023               /proc/1085/map_files/55da295b2000-55da2963d000      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023               /proc/1085/map_files/55da2963d000-55da29687000      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023               /proc/1085/map_files/55da29687000-55da2968b000      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023               /proc/1085/map_files/55da2968b000-55da2968c000      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023                                     /proc/1085/task/1085/exe      read system_u:object_r:sshd_exec_t:s0                 1              0
+system_u:system_r:sshd_t:s0-s0:c0.c1023 /usr/lib/.build-id/28/aa0c958312172dc18428c6b3c4480d02f037ad      read system_u:object_r:sshd_exec_t:s0                 1              0

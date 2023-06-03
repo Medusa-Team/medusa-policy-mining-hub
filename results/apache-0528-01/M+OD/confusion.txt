@@ -1,0 +1,3 @@
+hits=4171 correct denials=5581 overpermission=85 underpermission=985
+precision=0.98 sensitivity=0.809
+f1=0.886 f2=0.838 fm=0.89 csi=0.796

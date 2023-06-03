@@ -1,0 +1,6 @@
+                  subject_context                                                         name operation                         object_context  reference_result  medusa_result
+system_u:system_r:postgresql_t:s0                                               /var/lib/pgsql      read   system_u:object_r:postgresql_db_t:s0                 1              0
+system_u:system_r:postgresql_t:s0                                               /var/lib/pgsql     write   system_u:object_r:postgresql_db_t:s0                 1              0
+system_u:system_r:postgresql_t:s0 /usr/lib/.build-id/05/b6b5dcea6fffd7702ac4afa514d7b6417decbb      read system_u:object_r:postgresql_exec_t:s0                 1              0
+system_u:system_r:postgresql_t:s0 /usr/lib/.build-id/37/1c946b0ecf1c686345a36054cf831116444d52      read system_u:object_r:postgresql_exec_t:s0                 1              0
+system_u:system_r:postgresql_t:s0 /usr/lib/.build-id/82/4dd6365bbc049f8bc0c4b55fc79afa00ce31a9      read system_u:object_r:postgresql_exec_t:s0                 1              0
