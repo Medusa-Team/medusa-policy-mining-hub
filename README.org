@@ -1,7 +1,8 @@
 * Medusa policy mining hub
 Welcome to the hub of the Medusa policy mining project. It also serves as a
-result page for the dissertation thesis "Operating Systems Security". This is
-the contents of the repository:
+result page for the dissertation thesis "Operating Systems Security" and IEEE
+Access paper "Evaluation of policy mining from logs". This is the contents of
+the repository:
 
 - =medusa-policy-mining= :: The main policy mining application.
 - =medusa-policy-mining-helpers= :: Helper scripts to configure Constable and
@@ -10,3 +11,45 @@ the contents of the repository:
   thesis.
 - =results= :: These are the raw results from the evaluation in the dissertation
   thesis.
+* How to try it
+1) Use Fedora Server 37 ([[https://ftp.upjs.sk/pub/fedora/linux/releases/37/Server/x86_64/iso/Fedora-Server-netinst-x86_64-37-1.7.iso][iso download]]) as the base system. Newer versions should
+   work also.
+2) Download [[https://github.com/Medusa-Team/linux-medusa][Medusa]] and its authorization server, [[https://github.com/Medusa-Team/Constable/][Constable]], and compile them
+   according to instructions in their respective READMEs.
+3) Install services for which you want to create the policy (in our case
+   packages =openssh=, =postfix=, =postgresql-server= and =httpd=).
+4) Install requirements for the policy mining, packages =libselinux-devel=,
+   =python3-diff-match-patch=, =python3-more-itertools=.
+5) As a shortcut, here's a command that installs all software listed above:
+   : sudo dnf install openssh postfix postgresql-server httpd libselinux-devel python3-diff-match-patch python3-more-itertools
+6) Install the rest of requirements for python using pip:
+   : sudo pip install treelib string-grouper bitarray
+7) Create initial filesystem snapshot and move it to the =medusa-policy-mining=
+   folder. Medusa polivy mining uses =fs.db= by default.
+   #+begin_src sh
+     cd medusa-policy-mining/fs2json
+     python -m fs2json.fs2sql_cmd / fs.db
+     mv fs.db ..
+     cd ../..
+   #+end_src
+8) Reboot the system to the Medusa kernel (by selecting the GRUB entry ending
+   with medusa).
+9) Create logs by executing scripts in the helpers folder. For example,
+   =sshd-fedora.sh= creates logs for the OpenSSH SSH server. *Before* running
+   the script, check if variables =CONSTABLE_CONFIG=, =MEDUSA_CONFIG= and
+   =CONSTABLE_PATH= refer to correct directories in your system.
+   #+begin_src sh
+     cd medusa-policy-mining-helpers
+     # Do the necessary changes to the sshd-fedora.sh file
+     ./sshd-fedora.sh
+     # Repeat ./sshd-fedora.sh at least once if you want to do the multiple runs mining
+     mv *sshd.log ../medusa-policy-mining
+     cd ..
+   #+end_src
+10) Reboot to the Fedora kernel.
+11) Run the policy mining:
+    #+begin_src sh
+      cd medusa-policy-mining
+      npp.py --user=sshd --object=sshd --subject=sshd sshd-2023-05-11 *sshd.log
+    #+end_src
+    Results will be stored in the =redults= folder and printed on the terminal.
