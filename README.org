@@ -52,4 +52,4 @@ the repository:
       cd medusa-policy-mining
       npp.py --user=sshd --object=sshd --subject=sshd sshd-2023-05-11 *sshd.log
     #+end_src
-    Results will be stored in the =redults= folder and printed on the terminal.
+    Results will be stored in the =results= folder and printed on the terminal.
